@@ -1,0 +1,11 @@
+PKG curl
+
+CP root /
+CP usr /
+
+CMD /root/bootstrap-jackett.sh
+
+SYSRC jackett_enable=YES
+SYSRC jackettdotnet_data_dir=/config
+
+SERVICE radarr restart
